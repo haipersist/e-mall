@@ -106,12 +106,21 @@ HAYSTACK_CONNECTIONS = {
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+DB_NAME = 'app_dailyblog'
+MYSQL_USER = 'root'
+MYSQL_PWD =  '320623'
+MYSQL_PORT = ''
+MYSQL_HOST = ''
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'NAME': DB_NAME,
+        'ENGINE': 'django.db.backends.mysql',
+        'USER':MYSQL_USER ,
+        'PASSWORD':MYSQL_PWD,
+        'PORT':MYSQL_PORT,
+        'HOST':MYSQL_HOST,
+},
 }
 
 
